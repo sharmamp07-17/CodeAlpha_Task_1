@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #947a57;
+  /* background-color: #342e81; */
+}
+
+.container {
+  margin: auto;
+  padding: 25px 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+span {
+  margin: 0 5px;
+  color: rgb(236, 168, 12);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.form button {
+  font-size: 16px;
+  padding: 10px 30px;
+  background-color: rgb(255, 47, 0);
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+hr {
+  margin: 8px 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border: none;
+}
+
+#image-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.show {
+  margin: auto;
+  border: none;
+  width: 250px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  #image-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #image-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #image-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .form button {
+    padding: 10px 16px;
+  }
+
+  .show {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #image-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
